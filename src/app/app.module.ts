@@ -3,10 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { LineEllipsisDirective } from './directives/line-ellipsis.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LineEllipsisDirective
   ],
   imports: [
     BrowserModule,
