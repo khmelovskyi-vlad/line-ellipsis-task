@@ -17,14 +17,16 @@ export class LineEllipsisDirective {
   }
 
   ngOnInit() {
-    const webkitLineClamp = this.appLineEllipsis.toString();
-
     this.htmlElement.style.overflow = this.overflowStyle;
     this.htmlElement.style.display = this.display;
     this.htmlElement.style.webkitBoxOrient = this.webkitBoxOrient;
-    this.htmlElement.style.webkitLineClamp = webkitLineClamp;
+    this.htmlElement.style.webkitLineClamp = this.getWebkitLineClamp();
     //uncomment if need to wrap long words
     // this.htmlElement.style.overflowWrap = this.overflowWrap;
+  }
+
+  getWebkitLineClamp() : string {
+    return this.appLineEllipsis.toString();
   }
 
 }
